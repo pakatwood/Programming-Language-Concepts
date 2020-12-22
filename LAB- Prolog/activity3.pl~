@@ -1,0 +1,8 @@
+:- dynamic precipitation/0, snowing/0, raining/0, freezing/0.
+precipitation :- raining.
+precipitation :- snowing.
+raining :- \+ freezing, precipitation.
+snowing :- freezing, precipitation.
+snowing.
+
+
